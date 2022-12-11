@@ -1,0 +1,42 @@
+EXPORT = makes child processes inherit this var in env
+
+special characters that must be escaped:
+    \ (newline)
+    "
+    ` (command quote)
+    $ (var value)
+
+
+loops:
+
+    for iterates over list of values
+    while runs untill condition is evaluated false
+    while : = while true
+
+if:
+
+    if [ cond ]
+    then
+        command
+    elif [ cond2 ]
+    then
+        command 2
+    else
+        command 3
+    fi
+
+    [ $X -ne 0 ] && echo "X isn't zero" || echo "X is zero"
+    => && = comando que road se der true, || se der false
+
+variables
+$@ = list of all parameters program was called with
+$1 ... $9 -> ith parameters
+$# = number parameters called with
+$0 = name program
+$? = exit value of last run command
+$! = pid of last run ackground processes
+$$ = pid of current shell
+
+${var:-default_value}
+
+https://www.shellscript.sh/quickref.html
